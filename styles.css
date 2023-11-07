@@ -2,20 +2,29 @@
 
 /* Definindo variáveis de cores no escopo global */
 :root {
-  --cor-fundo-pagina: #01080E;
-  --cor-fundo-quiz: #0B0D20;
-  --cor-fundo-botao: #212333;
-  --cor-texto-botao: #D7F9FF;
-  --cor-fundo-botao-selecionado: #D7F9FF;
-  --cor-fundo-texto-botao-selecionado: #0B0D20;
-  --cor-titulo: #2BDEFD;
-  --cor-texto: #D7F9FF;
+  --cor-fundo-pagina-escuro: #01080E;
+  --cor-fundo-quiz-escuro: #0B0D20;
+  --cor-fundo-botao-escuro: #212333;
+  --cor-texto-botao-escuro: #D7F9FF;
+  --cor-fundo-botao-selecionado-escuro: #D7F9FF;
+  --cor-fundo-texto-botao-selecionado-escuro: #0B0D20;
+  --cor-titulo-escuro: #2BDEFD;
+  --cor-texto-escuro: #D7F9FF;
+  
+  --cor-fundo-pagina-claro: #EEF2FE;
+  --cor-fundo-quiz-claro: #FFF;
+  --cor-fundo-botao-claro: #F4F7FF;
+  --cor-texto-botao-claro: #6E859F;
+  --cor-fundo-botao-selecionado-claro: #C75EEB;
+  --cor-fundo-texto-botao-selecionado-claro: #C75EEB30;
+  --cor-titulo-claro: #284260;
+  --cor-texto-claro: #284260;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--cor-fundo-pagina);
-  color: var(--cor-texto);
+  background-color: var(--cor-fundo-pagina-claro);
+  color: var(--cor-texto-claro);
   margin: 0;
   padding: 0;
   display: flex;
@@ -25,7 +34,7 @@ body {
 }
 
 .quiz-container {
-  background-color: var(--cor-fundo-quiz);
+  background-color: var(--cor-fundo-quiz-claro);
   padding: 20px;
   border-radius: 8px;
   width: 90%;
@@ -35,7 +44,7 @@ body {
 
 h1, h2, .pergunta {
   font-family: 'Chakra Petch', sans-serif;
-  color: var(--cor-titulo);
+  color: var(--cor-titulo-claro);
 }
 
 h1 {
@@ -63,8 +72,8 @@ h2 {
 }
 
 button {
-  background-color: var(--cor-fundo-botao);
-  color: var(--cor-texto-botao);
+  background-color: var(--cor-fundo-botao-claro);
+  color: var(--cor-texto-botao-claro);
   border: none;
   padding: 15px;
   border-radius: 5px;
@@ -75,13 +84,13 @@ button {
 }
 
 button:hover {
-  background-color: var(--cor-fundo-botao-selecionado);
-  color: var(--cor-fundo-texto-botao-selecionado);
+  background-color: var(--cor-fundo-botao-selecionado-claro);
+  color: var(--cor-fundo-texto-botao-selecionado-claro);
 }
 
 button:focus {
   outline: none;
-  box-shadow: 0 0 0 2px var(--cor-fundo-botao-selecionado);
+  box-shadow: 0 0 0 2px var(--cor-fundo-botao-selecionado-claro);
 }
 
 .resultado {
