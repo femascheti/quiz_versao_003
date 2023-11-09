@@ -2,20 +2,17 @@
 
 /* Definindo variáveis de cores no escopo global */
 :root {
-  --cor-fundo-pagina: #01080E;
-  --cor-fundo-quiz: #0B0D20;
-  --cor-fundo-botao: #212333;
-  --cor-texto-botao: #D7F9FF;
-  --cor-fundo-botao-selecionado: #D7F9FF;
-  --cor-fundo-texto-botao-selecionado: #0B0D20;
+  --cor-fundo: #01080E;
+  --cor-principal: #0B0D20;
+  --cor-secundaria: #212333;
+  --cor-destaque: #D7F9FF;
   --cor-titulo: #2BDEFD;
-  --cor-texto: #D7F9FF;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--cor-fundo-pagina);
-  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  color: var(--cor-destaque);
   margin: 0;
   padding: 0;
   display: flex;
@@ -24,8 +21,8 @@ body {
   min-height: 100vh;
 }
 
-.quiz-container {
-  background-color: var(--cor-fundo-quiz);
+.caixa-principal {
+  background-color: var(--cor-secundaria);
   padding: 20px;
   border-radius: 8px;
   width: 90%;
@@ -33,7 +30,7 @@ body {
   margin: auto;
 }
 
-h1, h2, .pergunta {
+h1, h2, .perguntas {
   font-family: 'Chakra Petch', sans-serif;
   color: var(--cor-titulo);
 }
@@ -49,10 +46,10 @@ h2 {
   margin-bottom: 15px;
 }
 
-.pergunta {
+.perguntas {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  color: var(--cor-texto);
+  color: var(--cor-destaque);
   text-align: center;
 }
 
@@ -63,8 +60,8 @@ h2 {
 }
 
 button {
-  background-color: var(--cor-fundo-botao);
-  color: var(--cor-texto-botao);
+  background-color: var(--cor-principal);
+  color: var(--cor-destaque);
   border: none;
   padding: 15px;
   border-radius: 5px;
@@ -75,13 +72,13 @@ button {
 }
 
 button:hover {
-  background-color: var(--cor-fundo-botao-selecionado);
-  color: var(--cor-fundo-texto-botao-selecionado);
+  background-color: var(--cor-destaque);
+  color: var(--cor-secundaria);
 }
 
 button:focus {
   outline: none;
-  box-shadow: 0 0 0 2px var(--cor-fundo-botao-selecionado);
+  box-shadow: 0 0 0 2px var(--cor-destaque);
 }
 
 .resultado {
