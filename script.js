@@ -9,6 +9,7 @@ const textoPergunta = document.querySelector(".caixa-perguntas");
 const caixaOpcoes = document.querySelector(".caixa-opcoes");
 const resultadoTexto = document.querySelector(".texto-resultado");
 const elementoResultado = document.querySelector(".caixa-resultado");
+const botaoJogarNovamente = document.querySelector(".novamente-btn");
 
 function mostraPerguntaAtual() {
     if (atual >= perguntas.length) {
@@ -42,6 +43,22 @@ function mostraResultado() {
     caixaOpcoes.textContent = "";
     resultadoTexto.innerHTML = historia; // Alterado para innerHTML para interpretar as tags <br/>
     elementoResultado.classList.add("mostrar");
+    botaoJogarNovamente.addEventListener("click", jogarNovamente);
 }
 
+// trocar nomes 
+function substituiNomePerguntas() {
+    for (const nomesAleatorios of perguntas) {
+        nomesAleatorios.pergunta = nomesAleatorios.pergunta.replace(/!!você/g, nome);
+    }
+}
+
+function jogarNovamente() {
+    atual = 0;
+    historia = "";
+    elementoResultado.classList.remove("mostrar");
+    mostraPerguntaAtual();
+}
+
+substituiNomePerguntas();
 mostraPerguntaAtual();
