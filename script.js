@@ -5,10 +5,10 @@ let atual = 0;
 let perguntaAtual;
 let historia = "";
 
-const textoPergunta = document.getElementById("perguntas");
-const caixaOpcoes = document.getElementById("caixa-opcoes");
-const resultadoTexto = document.getElementById("resultado");
-const elementoResultado = document.getElementById("caixa-resultado");
+const textoPergunta = document.querySelector(".caixa-perguntas");
+const caixaOpcoes = document.querySelector(".caixa-opcoes");
+const resultadoTexto = document.querySelector(".texto-resultado");
+const elementoResultado = document.querySelector(".caixa-resultado");
 
 function mostraPerguntaAtual() {
     if (atual >= perguntas.length) {
